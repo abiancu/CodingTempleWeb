@@ -1,0 +1,160 @@
+@Textcolor: #848484;
+@gutter: 10%;
+@headingColor: #45a2da;
+
+
+
+
+
+article{
+	color: @Textcolor;
+	display: flex;
+	align-items: center;
+	&.reverse{
+		flex-direction: row-reverse;
+	}
+	&> *{
+	flex-basis: 50%;
+	}
+
+	img{
+		width: 100%;
+	}
+}
+
+footer{
+	display: flex;
+	justify-content: space-around;
+	&> *
+	{
+		flex-basis: 30%;
+	}
+	& > nav > ul{
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		& > li{
+			padding: 0.5em;
+		}
+	}
+}
+
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+	background-color: grey;
+	
+}
+
+.alt-link a {
+	color: white;
+}
+
+
+.alt-link {
+	background-color: black;
+}
+
+
+body {
+	color: black;
+	font-weight: 300px;
+	font-size: 16px;
+	line-height: 22px;
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	background: white;
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	color: @headingColor;
+}
+
+h4 {
+	color: @headingColor;
+}
+
+header {
+	padding: 0 @gutter;
+	color: #45a2da;
+	display: flex;
+	justify-content: space-between;
+	ul{
+		display: flex;
+		list-style-type: none;
+		& > li{
+			padding: 1em;
+		}
+		
+		& > li:hover{
+			
+			box-shadow: inset 0 3px 0 0 #45a2da;
+			& a{
+				color: #45a2da;
+			}
+		}
+		& > li a{
+			color: black;
+		}
+	}
+}
+
+
+.logo {
+	animation-name: fadein;
+	animation-duration: 10s;
+}
+
+footer {
+	padding: 0 @gutter;
+	background-color: black;
+	border-top: 1px solid rgb(0, 0, 0, 0.085);
+	box-shadow: insert rgba(255, 255, 255, 0.8);
+	a{
+		color: white;
+	}
+}
+
+main{
+	padding: 0 @gutter;
+	background-color: darkgrey;
+}
+
+p {
+	color: #848484;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+aside {
+	color: #848484;
+}
+
+nav {
+	display: inline-block;
+}
+
+
+/* this is Media Query. changes the display to fit mobile view.
+@media all and (max-width: 700px){
+	body{
+		background-color: yellow;
+	}
+
+}*/
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
