@@ -109,13 +109,13 @@ aside {
 nav {
   display: inline-block;
 }
-/* this is Media Query. changes the display to fit mobile view.
-@media all and (max-width: 700px){
-	body{
-		background-color: yellow;
-	}
-
-}*/
+/* this is Media Query. changes the display to fit mobile view.*/
+@media all and (min-width: px) {
+  body {
+    justify-content: center;
+    display: inline-block;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
